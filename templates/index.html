@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class=wrap>
+{% for result in content %}
+	<div class=modul>
+		<ul>
+			{% for item in result %}
+	  			<li><a href="{{item["link"]}}"> {{item["title"]}}</a> </li>
+	  		{% endfor %}
+		</ul>
+	</div>
+{% endfor %}
+</div>
+{% endblock %}
